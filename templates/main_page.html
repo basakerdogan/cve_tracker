@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Flask Static Demo</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+
+   <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Severity</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for index in range(cve_len) %}
+        <tr>
+          <td> {{cve_dict[index]["cve_id"]}}</td>
+          <td>{{cve_dict[index]["cve_desc"]}}</td>
+          <td>{{cve_dict[index]["cve_base_severity"]}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+  </body>
+</html>
